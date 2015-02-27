@@ -1,1 +1,1 @@
-javascript:(function(){$.getScript('https://raw.githubusercontent.com/guigggg/basicBot-pt/master/basicBot.js');})();
+javascript:(function(){$.getScript('https://rawgit.com/guigggg/basicBot-pt/master/basicBot.js');})();
