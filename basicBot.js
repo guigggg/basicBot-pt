@@ -185,13 +185,13 @@
         loggedInID: null,
         scriptLink: "https://rawgit.com/Yemasthui/basicBot/master/basicBot.js",
         cmdLink: "http://git.io/245Ppg",
-        chatLink: "https://rawgit.com/Yemasthui/basicBot/master/lang/en.json",
+        chatLink: "https://rawgit.com/Yemasthui/basicBot/master/lang/pt.json",
         chat: null,
         loadChat: loadChat,
         retrieveSettings: retrieveSettings,
         retrieveFromStorage: retrieveFromStorage,
         settings: {
-            botName: "basicBot",
+            botName: "gBot",
             language: "portuguese",
             chatLink: "https://rawgit.com/Yemasthui/basicBot/master/lang/pt.json",
             startupCap: 1, // 1-200
@@ -203,7 +203,7 @@
             bouncerPlus: true,
             blacklistEnabled: true,
             lockdownEnabled: false,
-            lockGuard: false,
+            lockGuard: true,
             maximumLocktime: 10,
             cycleGuard: true,
             maximumCycletime: 10,
@@ -295,7 +295,7 @@
             newBlacklisted: [],
             newBlacklistedSongFunction: null,
             roulette: {
-                rouletteStatus: false,
+                rouletteStatus: true,
                 participants: [],
                 countdown: null,
                 startRoulette: function () {
