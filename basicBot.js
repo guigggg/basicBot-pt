@@ -179,13 +179,13 @@
     var botCreatorIDs = ["3851534", "3934992", "4105209"];
 
     var basicBot = {
-        version: "2.0.0",
+        version: "2.2.1",
         status: false,
         name: "GBot",
-        loggedInID: guigggg,
+        loggedInID: null,
         scriptLink: "https://rawgit.com/Yemasthui/basicBot/master/basicBot.js",
         cmdLink: "http://git.io/245Ppg",
-        chatLink: "https://rawgit.com/guigggg/extesion.js/master/pt.json",
+        chatLink: "https://rawgit.com/Yemasthui/basicBot/master/lang/pt.json",
         chat: null,
         loadChat: loadChat,
         retrieveSettings: retrieveSettings,
@@ -193,7 +193,7 @@
         settings: {
             botName: "GBot",
             language: "portuguese",
-            chatLink: "https://rawgit.com/guigggg/extesion.js/master/pt.json",
+            chatLink: "https://rawgit.com/Yemasthui/basicBot/master/lang/pt.json",
             startupCap: 1, // 1-200
             startupVolume: 0, // 0-100
             startupEmoji: true, // true or false
