@@ -179,31 +179,31 @@
     var botCreatorIDs = ["3851534", "3934992", "4105209"];
 
     var basicBot = {
-        version: "2.2.1",
+        version: "2.0.0",
         status: false,
-        name: "basicBot",
-        loggedInID: null,
-        scriptLink: "https://rawgit.com/guigggg/basicBot-pt/master/basicBot.js",
+        name: "GBot",
+        loggedInID: guigggg,
+        scriptLink: "https://rawgit.com/Yemasthui/basicBot/master/basicBot.js",
         cmdLink: "http://git.io/245Ppg",
-        chatLink: "https://rawgit.com/Yemasthui/basicBot/master/lang/pt.json",
+        chatLink: "https://rawgit.com/guigggg/extesion.js/master/pt.json",
         chat: null,
         loadChat: loadChat,
         retrieveSettings: retrieveSettings,
         retrieveFromStorage: retrieveFromStorage,
         settings: {
-            botName: "gBot",
+            botName: "GBot",
             language: "portuguese",
-            chatLink: "https://rawgit.com/Yemasthui/basicBot/master/lang/pt.json",
+            chatLink: "https://rawgit.com/guigggg/extesion.js/master/pt.json",
             startupCap: 1, // 1-200
             startupVolume: 0, // 0-100
             startupEmoji: true, // true or false
             maximumAfk: 120,
             afkRemoval: false,
-            maximumDc: 120,
+            maximumDc: 60,
             bouncerPlus: true,
             blacklistEnabled: true,
             lockdownEnabled: false,
-            lockGuard: true,
+            lockGuard: false,
             maximumLocktime: 10,
             cycleGuard: true,
             maximumCycletime: 10,
@@ -295,9 +295,9 @@
             newBlacklisted: [],
             newBlacklistedSongFunction: null,
             roulette: {
-                rouletteStatus: true,
+                rouletteStatus: false,
                 participants: [],
-                countdown: 20,
+                countdown: null,
                 startRoulette: function () {
                     basicBot.room.roulette.rouletteStatus = true;
                     basicBot.room.roulette.countdown = setTimeout(function () {
@@ -306,7 +306,7 @@
                     API.sendChat(basicBot.chat.isopen);
                 },
                 endRoulette: function () {
-                    basicBot.room.roulette.rouletteStatus = true;
+                    basicBot.room.roulette.rouletteStatus = false;
                     var ind = Math.floor(Math.random() * basicBot.room.roulette.participants.length);
                     var winner = basicBot.room.roulette.participants[ind];
                     basicBot.room.roulette.participants = [];
@@ -315,7 +315,7 @@
                     var name = user.username;
                     API.sendChat(subChat(basicBot.chat.winnerpicked, {name: name, position: pos}));
                     setTimeout(function (winner, pos) {
-                        basicBot.userUtilities.moveUser(winner, pos, true);
+                        basicBot.userUtilities.moveUser(winner, pos, false);
                     }, 1 * 1000, winner, pos);
                 }
             }
@@ -2991,4 +2991,3 @@
 
     loadChat(basicBot.startup);
 }).call(this);
-
