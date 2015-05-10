@@ -179,9 +179,9 @@
     var botCreatorIDs = ["3851534", "4105209"];
 
     var basicBot = {
-        version: "2.3.5",
+        version: "2.3.4",
         status: false,
-        name: "G_Bot",
+        name: "basicBot",
         loggedInID: guigggg,
         scriptLink: "https://rawgit.com/Yemasthui/basicBot/master/basicBot.js",
         cmdLink: "http://git.io/245Ppg",
